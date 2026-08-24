@@ -201,11 +201,3 @@ Al iniciar, la API queda disponible en:
 
 Al hacer que el Service dependa de una interfaz y no de una clase concreta, las capas quedan menos unidas. El Service solo sabe qué operaciones necesita, como obtener todos los productos o buscar uno por ID, pero no conoce los detalles de cómo se consulta SQL Server. Si más adelante se cambia la forma de guardar los datos, se puede crear otro Repository que cumpla la misma interfaz sin tener que modificar el Service. También facilita las pruebas, porque se puede usar una implementación sencilla de la interfaz en lugar de conectar la base de datos real. En conjunto, el proyecto se vuelve más fácil de mantener, porque cada capa puede cambiar con menos impacto sobre las demás.
 
-## Qué revisar antes de subir el proyecto
-
-- Confirmar que la solución compila con `dotnet build`.
-- Verificar que la base de datos se creó y que Swagger muestra los dos endpoints.
-- Confirmar que las capturas `docs/captura1.png` y `docs/captura2.png` se muestran en el README.
-- Revisar que `appsettings.json` no contenga un usuario y una contraseña reales si se cambió la cadena de conexión.
-- No subir las carpetas `bin` y `obj`.
-- No realizar el commit hasta revisar estos puntos.
